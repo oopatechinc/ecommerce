@@ -35,8 +35,8 @@ const authStore = useAuthStore()
       <NuxtLink to="/about"><v-btn text class="nav-btn">About Us</v-btn></NuxtLink>
       <NuxtLink to="/contact"><v-btn text class="nav-btn">Contact</v-btn></NuxtLink>
 
-      <v-btn text class="nav-btn">Register</v-btn>
-      <v-btn text class="nav-btn">Login</v-btn>
+      <v-btn text class="nav-btn" @click="authStore.showLoginDialog = true">Register</v-btn>
+      <v-btn text class="nav-btn" @click="authStore.showLoginDialog = true">Login</v-btn>
     </div>
 
   </div>

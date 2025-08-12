@@ -1,0 +1,168 @@
+{
+  "track_genres": "Track Genres",
+  "artist_name": "Artist Name",
+  "artist_id": "Artist ID",
+  "platform": "Platform",
+  "track_name": "Track Name",
+  "track_id": "Track ID",
+  "btn_text_view": "View",
+  "btn_text_sign_in": "Sign In",
+  "btn_text_sign_out": "Sign Out",
+  "btn_text_sign_up": "Sign Up",
+  "single_word_profile": "Profile",
+
+  "nav_home": "Home",
+  "nav_pricing": "Pricing",
+  "nav_contact_us": "Contact Us",
+  "nav_privacy_policy": "Privacy Policy",
+  "nav_terms": "Terms & Conditions",
+  "nav_my_appointments": "My Appointments",
+  "nav_btn_sign_in": "Sign In",
+
+  "app_bar_title": "Welcome to GroovePitcher",
+  "login_title": "Sign In",
+  "login_email": "Email",
+  "login_password": "Password",
+  "login_submit": "Submit",
+  "login_failed_text": "Sign-in failed. Please try again or contact support if issue continues.",
+  "login_no_account_text": "Don't have an account yet?",
+  "login_signup_text": "Sign Up",
+
+  "register_title": "Sign Up",
+  "register_name": "Name",
+  "register_email": "Email",
+  "register_password": "Password",
+  "register_submit": "Submit",
+  "register_has_account_text": "Already have an account?",
+  "register_login_text": "Sign In",
+
+  "home_hero_title": "Generate An Audience For Your Music",
+  "home_hero_subtitle": "Your music deserves to be heard. Pitch your music to our selection of trusted Spotify playlist curators.",
+  "home_hero_button": "Create New Campaign",
+
+  "home_create_campaign_title": "Create a Campaign in Minutes!",
+  "home_create_campaign_step_1_title": "Find Your Music",
+  "home_create_campaign_step_1_text": "Find your music on spotify using the track id or url",
+  "home_create_campaign_step_2_title": "Choose Your Genre",
+  "home_create_campaign_step_2_text": "Choose the genres that best fit your music. We have a vast list of genres so our clients always have the specific genre for their music.",
+  "home_create_campaign_step_3_title": "Select Your Playlists",
+  "home_create_campaign_step_3_text": "After you choose your genres, we will provide you with a list of playlists that match your selected genres. You can choose to listen to these playlists and decide if you want us to pitch your music to the playlist curator.",
+  "home_create_campaign_step_4_title": "Payment",
+  "home_create_campaign_step_4_text": "Pay for your campaign and we will take care of the rest!",
+
+  "home_expand_audience_title": "Expand your music audiences",
+  "home_expand_audience_btn_text": "Create New Campaign",
+
+  "home_payment_title": "One Simple Payment Solution!",
+  "home_payment_subtitle": "Customize your playlist selections to match your budget",
+  "price_card_title": "Per Playlist Billing",
+  "price_card_btn_text": "Get Started",
+
+  "home_trust_text": "As musicians ourselves, we believe in providing a product that helps independent and established artists to grow their fan-base. We meticulously vet all our playlist curators and make sure our customers have the best experience when using our services. Give us a try now.",
+
+  "home_contact_title": "Got a Question?",
+  "home_contact_text": "We would love to answer. Call or message us and we will get back to you as soon as possible.",
+
+  "home_contact_card_title": "Contact Us",
+  "home_contact_card_placeholder_name": "Name",
+  "home_contact_card_placeholder_email": "Email",
+  "home_contact_card_placeholder_message": "Message",
+  "home_contact_card_btn_text": "Submit",
+
+
+  "home_features_title": "A platform built for your success!",
+  "home_features_1_title": "Perfect for Spotify",
+  "home_features_1_text": "We know you love Spotify, so we've made our integration as smooth as possible.",
+  "home_features_2_title": "Fast and Easy",
+  "home_features_2_text": "Submit songs and playlists in minutes with our user friendly platform.",
+  "home_features_3_title": "Save Time",
+  "home_features_3_text": "Automatically submit to playlists using our Automatic Submission tool.",
+
+  "footer_support_title": "Support",
+  "footer_resources_title": "Resources",
+  "footer_social_media_title": "Social Media",
+  "footer_rights_text": "All rights reserved",
+
+  "sidemenu_new_campaign_text": "New Campaign",
+  "sidemenu_home_text": "Home",
+  "sidemenu_playlists_text": "Playlists",
+  "sidemenu_campaigns_text": "Campaigns",
+  "sidemenu_profile_text": "Profile",
+
+  "dashboard_home_title": "Take your music further",
+  "dashboard_home_subtitle": "Bring your songs to a wider audience in seconds",
+  "dashboard_home_campaign_text": "Campaigns",
+
+  "campaign_create_campaign_title": "Create New Campaign",
+  "campaign_stepper_title_1": "Find Your Track",
+  "campaign_stepper_title_2": "Choose Genres",
+  "campaign_stepper_title_3": "Contact Info",
+  "campaign_stepper_title_4": "Review Campaign",
+  "campaign_stepper_title_5": "Payment",
+
+  "campaign_stepper_track_instruction": "Paste Your Track's Spotify URL or ID to Begin",
+  "campaign_stepper_track_instruction_label": "Track URL or ID",
+  "campaign_stepper_track_button": "Find Track",
+  "campaign_stepper_track_select_error_message": "You must find a track before you can proceed",
+
+  "campaign_stepper_genre_title": "Choose one or more genres that best describe your music",
+  "campaign_stepper_genre_word": "Genre",
+  "campaign_stepper_genre_select_error_message": "You must select one or more genres for your music before you can proceed.",
+
+
+  "campaign_stepper_contact_information_1": "Confirm or update your contact information",
+  "campaign_stepper_contact_information_2": "Playlist curators will use one of the contact information below to notify you if they add your song to their playlist",
+
+  "create_new_campaign_matched_playlists": "Matched Playlists",
+
+  "campaign_stepper_previous_btn_text": "Previous",
+  "campaign_stepper_next_btn_text": "Next",
+
+  "campaign_stepper_review_title": "Your track will be sent to :param playlist curators for consideration!",
+
+  "campaign_stepper_order_summary_title": "Order Summary",
+  "campaign_stepper_order_summary_price_per_playlist": "Price Per Playlist Submission",
+  "campaign_stepper_order_summary_selected_playlist": "Number of Selected Playlists",
+  "campaign_stepper_order_summary_subtotal": "SubTotal",
+  "campaign_stepper_order_summary_total": "Total",
+
+
+  "campaign_recent_campaign_title": "Recent Campaigns",
+  "campaign_new_campaign_text": "New Campaign",
+
+  "playlist_table_playlist_name" : "Playlist Name",
+  "playlist_table_playlist_follows" : "Follows",
+  "playlist_table_playlist_tracks" : "Number of Tracks",
+  "playlist_table_playlist_image" : "Image",
+  "playlist_table_listen_on_spotify" : "Listen on Spotify",
+  "playlist_selection_text" : "You can select/unselect a playlist to adjust the price to your budget.",
+  "playlist_table_curator_name": "Curator Name",
+  "playlist_table_curator_email": "Curator Email",
+  "playlist_table_submission_url": "Submission Url",
+
+  "profile_page_title": "Profile",
+  "profile_change_password_btn_text": "Change Password",
+  "profile_name_text": "Name",
+  "profile_email_text": "Email",
+  "profile_password_text": "Password",
+
+  "profile_update_password_text": "Update Password",
+  "profile_new_password_text": "New Password",
+  "profile_confirm_new_password_text": "Confirm New Password",
+  "profile_update_password_btn_text": "Update",
+
+  "validation_rules_name_required": "Name is required",
+  "validation_rules_name_length": "Name must be less than 50 characters.",
+  "validation_rules_email_required": "Email is required.",
+  "validation_rules_email_valid": "Email must be valid.",
+  "validation_rules_message_required": "Message is required.",
+  "validation_rules_password_required": "Password is required",
+  "validation_rules_password_length": "Password must be 8 characters or more.",
+  "validation_rules_track_id_required": "Track Url or ID is required.",
+
+  "notification_contact_message_sent": "Your message has been sent! We will get in touch with you shortly",
+  "notification_contact_message_error": "Unable to send your message. Please try again later",
+  "notification_registration_success": "Registration successful! You can now login with your registered credentials",
+  "notification_registration_error": "Registration failed. Please try again or contact us if issue continues",
+  "notification_create_campaign_track_not_found": "Your track was not found. Please paste track url or id"
+}

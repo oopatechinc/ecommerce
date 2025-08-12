@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import AppBarDesktop from "~/components/nav/AppBarDesktop.vue";
+import SnackbarNotification from "~/components/SnackbarNotification.vue";
 
 const authStore = useAuthStore()
 const display = useDisplay()
@@ -51,18 +50,18 @@ function changeColor() {
     </NavAppBar>
 
     <VMain>
-      <NuxtPage />
+      <NuxtPage/>
     </VMain>
 
-    <!--    &lt;!&ndash;-Footer-&#45;&#45;&#45;&#45;&ndash;&gt;-->
-    <!--    <PageFooter></PageFooter>-->
+        <!---Footer------->
+        <NavPageFooter/>
 
-    <!--    &lt;!&ndash;-Snackbar for &#45;&#45;&ndash;&gt;-->
-    <!--    <Snackbar/>-->
+        <!---Snackbar for ---->
+        <SnackbarNotification/>
 
-    <!--    <v-dialog v-if="showLoginDialog" v-model="showLoginDialog" width="450" scrollable>-->
-    <!--      <Login/>-->
-    <!--    </v-dialog>-->
+        <VDialog v-if="authStore.showLoginDialog" v-model="authStore.showLoginDialog" width="450" scrollable>
+          <AuthLogin/>
+        </VDialog>
 
     <!--    <v-dialog v-model="showRegistrationDialog" width="450" scrollable>-->
     <!--      <Register/>-->

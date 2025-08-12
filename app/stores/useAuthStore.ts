@@ -3,6 +3,7 @@ import type {AxiosInstance} from "axios";
 
 export const useAuthStore = defineStore('auth', () => {
     const axios = useNuxtApp().$axios as AxiosInstance
+    const snackbar = useSnackbarStore()
 
     const user = ref<User>()
     const isLoggedIn = ref(false)
@@ -23,6 +24,20 @@ export const useAuthStore = defineStore('auth', () => {
         }
 
         return response
+    }
+
+    async function socialLogin(data: any) {
+        let error = false
+        const response = await axios.post('login/get-social-user?type=user&appendConsultant=true&appendMerchantCustomer=true', data).catch(() => {
+            error = true
+        })
+
+        if (!error) {
+            isLoggedIn.value = true
+            user.value = response!.data.data as User
+        }
+
+        return response!.data.data
     }
 
     async function fetchSocialUser(data: any) {
@@ -47,6 +62,10 @@ export const useAuthStore = defineStore('auth', () => {
         return await axios.post('register/confirm-verification-code', data)
     }
 
+    async function login(data: {email: string, password: string}) {
+        return await axios.post('login', data)
+    }
+
     async function logout() {
         let error = false
         const response = await axios.post('/logout').catch(() => {
@@ -66,5 +85,5 @@ export const useAuthStore = defineStore('auth', () => {
         return response.data.data;
     }
 
-    return {user, registerWithPhoneVerification, verifyRegistrationCode, logout, isLoggedIn, fetchUser, isLoggingIn, showLoginDialog, showSignUpDialog, fetchSocialUser, sendVerificationCode}
+    return {user, registerWithPhoneVerification, verifyRegistrationCode, login, logout, isLoggedIn, fetchUser, isLoggingIn, showLoginDialog, showSignUpDialog, fetchSocialUser, sendVerificationCode}
 })

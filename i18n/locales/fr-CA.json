@@ -1,0 +1,167 @@
+{
+  "track_genres": "Genres de piste",
+  "artist_name": "Nom de l'artiste",
+  "artist_id": "ID de l'artiste",
+  "platform": "Plateforme",
+  "track_name": "Nom de la piste",
+  "track_id": "ID de piste",
+  "btn_text_view": "Voir",
+  "btn_text_sign_in": "Se Connecter",
+  "btn_text_sign_out": "Se déconnecter",
+  "btn_text_sign_up": "S'inscrire",
+  "single_word_profile": "Profil",
+
+  "nav_home": "Accueil",
+  "nav_pricing": "Tarifs",
+  "nav_contact_us": "Contactez-Nous",
+  "nav_privacy_policy": "Politique de Confidentialité",
+  "nav_terms": "Conditions Générales",
+  "nav_my_appointments": "Mes Rendez-vous",
+  "nav_btn_sign_in": "Se Connecter",
+
+  "app_bar_title": "Bienvenue sur GroovePitcher",
+  "login_title": "Connexion",
+  "login_email": "E-mail",
+  "login_password": "Mot de passe",
+  "login_submit": "Soumettre",
+  "login_failed_text": "La connexion a échoué. Veuillez réessayer ou contacter l'assistance si le problème persiste.",
+  "login_no_account_text": "Vous n'avez pas encore de compte ?",
+  "login_signup_text": "Inscrivez-vous",
+
+  "register_title": "Inscription",
+  "register_name": "Nom",
+  "register_email": "E-mail",
+  "register_password": "Mot de passe",
+  "register_submit": "Soumettre",
+  "register_has_account_text": "Vous avez déjà un compte?",
+  "register_login_text": "Se Connecter",
+
+
+  "home_hero_title": "Générez une audience pour votre musique",
+  "home_hero_subtitle": "Votre musique mérite d'être entendue. Présentez-la à notre sélection de conservateurs de playlist Spotify de confiance.",
+  "home_hero_button": "Créer une nouvelle campagne",
+
+  "home_create_campaign_title": "Créez une campagne en quelques minutes !",
+  "home_create_campaign_step_1_title": "Trouvez votre musique",
+  "home_create_campaign_step_1_text": "Trouvez votre musique sur Spotify à l'aide de l'identifiant ou de l'URL de la piste",
+  "home_create_campaign_step_2_title": "Choisissez votre genre",
+  "home_create_campaign_step_2_text": "Choisissez les genres qui correspondent le mieux à votre musique. Nous avons une vaste liste de genres afin que nos clients aient toujours le genre spécifique pour leur musique.",
+  "home_create_campaign_step_3_title": "Sélectionnez vos listes de lecture",
+  "home_create_campaign_step_3_text": "Après avoir choisi vos genres, nous vous fournirons une liste de playlists qui correspondent aux genres sélectionnés. Vous pouvez choisir d'écouter ces playlists et décider si vous souhaitez que nous présentions votre musique au conservateur de la playlist." ,
+  "home_create_campaign_step_4_title": "Paiement",
+  "home_create_campaign_step_4_text": "Payez votre campagne et nous nous occupons du reste !",
+
+  "home_expand_audience_title": "Élargissez vos audiences musicales",
+  "home_expand_audience_btn_text": "Créer une nouvelle campagne",
+
+  "home_payment_title": "Une solution de paiement simple !",
+  "home_payment_subtitle": "Personnalisez vos sélections de playlist en fonction de votre budget",
+  "price_card_title": "Facturation par liste de lecture",
+  "price_card_btn_text": "Commencez",
+
+  "home_trust_text": "En tant que musiciens nous-mêmes, nous croyons en la fourniture d'un produit qui aide les artistes indépendants et établis à développer leur base de fans. Nous examinons méticuleusement tous nos conservateurs de playlists et veillons à ce que nos clients aient la meilleure expérience lorsqu'ils utilisent nos services. essayons-nous maintenant.",
+
+  "home_contact_title": "Vous avez une question ?",
+  "home_contact_text": "Nous serions ravis de répondre. Appelez-nous ou envoyez-nous un message et nous vous répondrons dans les plus brefs délais.",
+
+  "home_contact_card_title": "Contactez-nous",
+  "home_contact_card_placeholder_name": "Nom",
+  "home_contact_card_placeholder_email": "E-mail",
+  "home_contact_card_placeholder_message": "Message",
+  "home_contact_card_btn_text": "Soumettre",
+
+  "home_features_title": "Une plateforme construite pour votre réussite!",
+  "home_features_1_title": "Parfait pour Spotify",
+  "home_features_1_text": "Nous savons que vous aimez Spotify, nous avons donc rendu notre intégration aussi fluide que possible.",
+  "home_features_2_title": "Rapide et facile",
+  "home_features_2_text": "Soumettez des chansons et des playlists en quelques minutes grâce à notre plateforme conviviale.",
+  "home_features_3_title": "Gagnez du temps",
+  "home_features_3_text": "Soumettre automatiquement aux playlists à l'aide de notre outil de soumission automatique.",
+
+  "footer_support_title": "Assistance",
+  "footer_resources_title": "Ressources",
+  "footer_social_media_title": "Réseaux sociaux",
+  "footer_rights_text": "Tous droits réservés",
+
+  "sidemenu_new_campaign_text": "Nouvelle Campagne",
+  "sidemenu_home_text": "Accueil",
+  "sidemenu_playlists_text": "Listes de lecture",
+  "sidemenu_campaigns_text": "Campagnes",
+  "sidemenu_profile_text": "Profil",
+
+  "dashboard_home_title": "Amenez votre musique plus loin",
+  "dashboard_home_subtitle": "Proposez vos chansons à un public plus large en quelques secondes",
+  "dashboard_home_campaign_text": "Campagnes",
+
+  "campaign_create_campaign_title": "Créer une nouvelle campagne",
+  "campaign_stepper_title_1": "Trouvez votre trace",
+  "campaign_stepper_title_2": "Choisissez les genres",
+  "campaign_stepper_title_3": "Informations de contact",
+  "campaign_stepper_title_4": "Campagne de révision",
+  "campaign_stepper_title_5": "Paiement",
+
+  "campaign_stepper_track_instruction": "Collez l'URL ou l'identifiant Spotify de votre piste pour commencer",
+  "campaign_stepper_track_instruction_label": "Suivre l'URL ou l'ID",
+  "campaign_stepper_track_button": "Trouver une piste",
+  "campaign_stepper_track_select_error_message": "Vous devez trouver une piste avant de pouvoir continuer",
+
+  "campaign_stepper_genre_title": "Choisissez un ou plusieurs genres qui décrivent le mieux votre musique",
+  "campaign_stepper_genre_word": "Genre",
+  "campaign_stepper_genre_select_error_message": "Vous devez sélectionner un ou plusieurs genres pour votre musique avant de pouvoir continuer.",
+
+
+  "campaign_stepper_contact_information_1": "Confirmez ou mettez à jour vos coordonnées",
+  "campaign_stepper_contact_information_2": "Les conservateurs de playlist utiliseront l'une des informations de contact ci-dessous pour vous avertir s'ils ajoutent votre chanson à leur playlist",
+
+  "create_new_campaign_matched_playlists": "Listes de lecture correspondantes",
+
+  "campaign_stepper_previous_btn_text": "Précédent",
+  "campaign_stepper_next_btn_text": "Suivant",
+
+  "campaign_stepper_review_title": "Votre morceau sera envoyé aux conservateurs de la playlist :param pour examen !",
+
+  "campaign_stepper_order_summary_title": "Récapitulatif de la commande",
+  "campaign_stepper_order_summary_price_per_playlist": "Prix par soumission de playlist",
+  "campaign_stepper_order_summary_selected_playlist": "Nombre de listes de lecture sélectionnées",
+  "campaign_stepper_order_summary_subtotal": "Sous-total",
+  "campaign_stepper_order_summary_total": "Total",
+
+  "campaign_recent_campaign_title": "Campagnes récentes",
+  "campaign_new_campaign_text": "Nouvelle Campagne",
+
+  "playlist_table_playlist_name" : "Nom de la liste de lecture",
+  "playlist_table_playlist_follows" : "Suit",
+  "playlist_table_playlist_tracks" : "Nombre de pistes",
+  "playlist_table_playlist_image" : "Image",
+  "playlist_table_listen_on_spotify" : "Écouter sur Spotify",
+  "playlist_selection_text" : "Vous pouvez sélectionner/désélectionner une playlist pour ajuster le prix à votre budget.",
+  "playlist_table_curator_name": "Nom du conservateur",
+  "playlist_table_curator_email": "E-mail du conservateur",
+  "playlist_table_submission_url": "URL de soumission",
+
+  "profile_page_title": "Profil",
+  "profile_change_password_btn_text": "Changer le mot de passe",
+  "profile_name_text": "Nom",
+  "profile_email_text": "E-mail",
+  "profile_password_text": "Mot de passe",
+
+  "profile_update_password_text": "Mettre à jour le mot de passe",
+  "profile_new_password_text": "Nouveau mot de passe",
+  "profile_confirm_new_password_text": "Confirmer le nouveau mot de passe",
+  "profile_update_password_btn_text": "Mise à jour",
+
+  "validation_rules_name_required": "Le nom est requis",
+  "validation_rules_name_length": "Le nom doit comporter moins de 50 caractères.",
+  "validation_rules_email_required": "L'e-mail est requis.",
+  "validation_rules_email_valid": "L'e-mail doit être valide.",
+  "validation_rules_message_required": "Le message est requis.",
+  "validation_rules_password_required": "Un mot de passe est requis",
+  "validation_rules_password_length": "Le mot de passe doit comporter 8 caractères ou plus.",
+  "validation_rules_track_id_required": "L'URL ou l'ID du suivi est requis.",
+
+  "notification_contact_message_sent": "Votre message a été envoyé ! Nous vous contacterons sous peu",
+  "notification_contact_message_error": "Impossible d'envoyer votre message. Veuillez réessayer plus tard",
+  "notification_registration_success": "Inscription réussie ! Vous pouvez maintenant vous connecter avec vos identifiants enregistrés",
+  "notification_registration_error": "L'enregistrement a échoué. Veuillez réessayer ou contactez-nous si le problème persiste",
+  "notification_create_campaign_track_not_found": "Votre piste n'a pas été trouvée. Veuillez coller l'URL ou l'identifiant de la piste"
+}
