@@ -63,9 +63,9 @@ function changeColor() {
           <AuthLogin/>
         </VDialog>
 
-    <!--    <v-dialog v-model="showRegistrationDialog" width="450" scrollable>-->
-    <!--      <Register/>-->
-    <!--    </v-dialog>-->
+        <VDialog v-model="authStore.showRegistrationDialog" width="450" scrollable>
+          <AuthRegister/>
+        </VDialog>
 
     <!--    <v-dialog v-model="showForgotPasswordDialog" width="450" scrollable>-->
     <!--      <ForgotPassword/>-->

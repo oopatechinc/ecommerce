@@ -28,7 +28,7 @@ async function login() {
     return snackbar.displayErrorMessage('Login error')
   }
 
-  authStore.user = response?.data.data as User
+  authStore.setUser(response?.data.data as User)
 
   //registerWebsocketUser()
 
@@ -39,18 +39,6 @@ function reset() {
   email.value = ''
   password.value = ''
   authStore.showLoginDialog = false
-}
-
-function showRegistrationDialog() {
-  // this.setState({key: 'showLoginDialog', value: false})
-  // this.setState({key: 'showRegistrationDialog', value: true})
-  // this.setState({key: 'showForgotPasswordDialog', value: false})
-}
-
-function showForgotPasswordDialog() {
-  // this.setState({key: 'showLoginDialog', value: false})
-  // this.setState({key: 'showRegistrationDialog', value: false})
-  // this.setState({key: 'showForgotPasswordDialog', value: true})
 }
 
 async function socialLogin(provider: string) {
