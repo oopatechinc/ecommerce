@@ -12,6 +12,15 @@ export default defineNuxtConfig({
       clientBaseUrl: process.env.CLIENT_BASE_URL,
       sessionStoreName: process.env.SESSION_STORE_NAME,
       sessionTokenKey: process.env.SESSION_TOKEN_KEY,
+      contact: {
+        phoneNumber: process.env.CONTACT_PHONE_NUMBER,
+        email: process.env.CONTACT_EMAIL,
+        addressLine1: process.env.CONTACT_ADDRESS_LINE_1,
+        addressLine2: process.env.CONTACT_ADDRESS_LINE_2,
+        city: process.env.CONTACT_CITY,
+        locality: process.env.CONTACT_LOCALITY,
+        addressCode: process.env.CONTACT_ADDRESS_CODE,
+      }
     }
   },
   modules: ['@nuxt/eslint', 'vuetify-nuxt-module', '@pinia/nuxt', '@nuxtjs/i18n'],

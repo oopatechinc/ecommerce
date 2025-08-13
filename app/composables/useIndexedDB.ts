@@ -1,8 +1,5 @@
 import {openDB} from "idb";
 
-const SESSIONS_STORE_NAME = 'sessions'
-const SESSIONS_TOKEN_KEY = 'session-token'
-
 export const useIndexedDB = () => {
         const config = useRuntimeConfig()
 

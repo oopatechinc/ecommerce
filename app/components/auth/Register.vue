@@ -3,15 +3,15 @@ import type {User} from "~/types/user.type"
 
 const authStore = useAuthStore()
 const validationRules = useValidationRules()
+const snackbar = useSnackbarStore()
 
 
 const firstname = ref('')
 const lastname = ref('')
 const email = ref('')
-const phone_number = ref('')
+const phone = ref('')
 const password = ref('')
 const confirmPassword = ref('')
-const isRegistering  = ref(false)
 
 const formValidity = ref(null)
 
@@ -19,62 +19,56 @@ function cancel() {
   firstname.value = '';
   lastname.value = '';
   email.value = '';
-  phoneNumber.value = '';
+  phone.value = '';
+  authStore.showRegistrationDialog = false
 }
+
 async function register() {
   if (formValidity.value !== true) return
 
-  const data = {
-    firstname: this.firstname,
-    lastname: this.lastname,
-    email: this.email,
-    password: this.password,
-    phone: this.phone_number
+  const payload = {
+    firstname: firstname.value,
+    lastname: lastname.value,
+    email: email.value,
+    password: password.value,
+    phone: phone.value
   }
 
-  isRegistering.value = true
   let error = false
-  const response = authStore.registerWithCredentials(data).catch(() => {
+  await authStore.registerWithCredentials(payload as User).catch(() => {
     error = true
   })
-
-  isRegistering.value = false
-  if (error) return
 
   if (error) {
     return snackbar.displayErrorMessage('Registration error')
   }
 
-  authStore.setUser(response?.data.data as User)
-
-  useSnackbarStore().displaySuccessMessage('Your registration was successful! You are now logged in')
+  snackbar.displaySuccessMessage('Your registration was successful! You are now logged in')
   cancel()
 }
 </script>
 
 <template>
-  <VCard :loading="isRegistering">
+  <VCard :loading="authStore.isRegistering">
     <VCardTitle class="d-flex justify-space-between py-4 bg-primary white--text">
       <div><VImg src="/logo.svg" width="150"/></div>
 
-      <div>
-        <VBtn icon dark @click="cancel">
-          <VIcon>mdi-close</VIcon>
-        </VBtn>
+      <div class="mt-3">
+        <VIcon @click="cancel">mdi-close</VIcon>
       </div>
     </VCardTitle>
     <div class="px-6"><p class="mt-6 text--primary">Register</p></div>
     <VCardText>
       <VForm v-model="formValidity" validate-on="blur lazy" @submit.prevent="register">
       <VRow>
-        <VCol cols="12">
+        <VCol cols="12" md="6">
           <VTextField
             v-model="firstname"
             label="Firstname" dense outlined
             :rules="validationRules.genericRequiredRule('First name is required')"
           />
         </VCol>
-        <VCol cols="12">
+        <VCol cols="12" md="6">
           <VTextField
             v-model="lastname"
             label="Lastname" dense outlined
@@ -83,7 +77,7 @@ async function register() {
         </VCol>
       </VRow>
       <VRow>
-        <VCol cols="12">
+        <VCol cols="12" md="6">
           <VTextField
             v-model="email"
             label="Email"
@@ -92,12 +86,10 @@ async function register() {
             :rules="validationRules.emailRules"
           />
         </VCol>
-        <VCol cols="12" class="pb-0">
-          <VTextField v-model="phone_number" label="Phone" dense outlined/>
+        <VCol cols="12" md="6" class="pb-0">
+          <VTextField v-model="phone" label="Phone" dense outlined/>
         </VCol>
-      </VRow>
-      <VRow>
-        <VCol cols="12">
+        <VCol cols="12" md="6">
           <VTextField
             v-model="password"
             label="Password" dense outlined
@@ -105,9 +97,7 @@ async function register() {
             :rules="validationRules.loginPasswordRules"
           />
         </VCol>
-      </VRow>
-      <VRow>
-        <VCol cols="12">
+        <VCol cols="12" md="6">
           <VTextField
             v-model="confirmPassword"
             label="Confirm Password" dense outlined

@@ -20,15 +20,13 @@ async function login() {
   if (formValidity.value !== true) return
 
   let error = false
-  const response = authStore.login({email: email.value, password: password.value}).catch(() => {
+  authStore.login({email: email.value, password: password.value}).catch(() => {
     error = true
   })
 
   if (error) {
     return snackbar.displayErrorMessage('Login error')
   }
-
-  authStore.setUser(response?.data.data as User)
 
   //registerWebsocketUser()
 
@@ -58,10 +56,8 @@ async function socialLogin(provider: string) {
           <VImg src="/logo.svg" width="150" />
         </div>
 
-        <div>
-          <VBtn flat icon @click="reset">
-            <VIcon>mdi-close</VIcon>
-          </VBtn>
+        <div class="mt-2">
+          <VIcon @click="reset">mdi-close</VIcon>
         </div>
       </div>
     </VCardTitle>

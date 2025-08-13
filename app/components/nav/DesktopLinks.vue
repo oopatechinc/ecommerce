@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const authStore = useAuthStore()
+const messageStore = useMessagesStore()
 </script>
 
 <template>
@@ -19,30 +20,52 @@ const authStore = useAuthStore()
         Add Your Business
       </VBtn>
     </VHover>
-    <div v-if="!authStore.isLoggedIn">
-      <NuxtLink to="/"><VBtn text class="nav-btn">Home</VBtn></NuxtLink>
-      <NuxtLink to="/businesses"><VBtn text class="nav-btn">Businesses</VBtn></NuxtLink>
-    </div>
+    <div class="d-flex">
+      <div>
+        <NuxtLink to="/"><VBtn text class="nav-btn">Home</VBtn></NuxtLink>
+        <NuxtLink to="/businesses">
+          <VBtn text class="nav-btn">
+            Businesses
+            <VIcon v-if="authStore.isLoggedIn">mdi-store</VIcon>
+          </VBtn>
+        </NuxtLink>
+      </div>
 
-    <div v-else class="d-flex">
-      <NavBusinessNavLink/>
-      <NavMessageNavLink />
-      <NavAppointmentNavLink />
-      <NavMoreMenuDropdown />
-      <NavAccountDropdown />
-    </div>
-    <div v-if="!authStore.isLoggedIn">
-      <NuxtLink to="/about"><v-btn text class="nav-btn">About Us</v-btn></NuxtLink>
-      <NuxtLink to="/contact"><v-btn text class="nav-btn">Contact</v-btn></NuxtLink>
+      <template v-if="!authStore.isLoggedIn">
+        <NuxtLink to="/about"><v-btn text class="nav-btn">About Us</v-btn></NuxtLink>
+        <NuxtLink to="/contact"><v-btn text class="nav-btn">Contact</v-btn></NuxtLink>
+        <VBtn text class="nav-btn" @click="authStore.showRegistrationDialog = true">Register</VBtn>
+        <VBtn text class="nav-btn" @click="authStore.showLoginDialog = true">Login</VBtn>
+      </template>
+      <template v-else>
+        <NuxtLink to="/messages">
+          <VBtn text class="nav-btn">
+            My Messages
+            <VBadge
+                v-if="messageStore.unreadMessagesCount > 0"
+                :content="messageStore.unreadMessagesCount"
+                color="success"
+                overlap
+            >
+              <VIcon>mdi-email</VIcon>
+            </VBadge>
+            <v-icon v-else>mdi-email</v-icon>
+          </VBtn>
+        </NuxtLink>
 
-      <v-btn text class="nav-btn" @click="authStore.showRegistrationDialog = true">Register</v-btn>
-      <v-btn text class="nav-btn" @click="authStore.showLoginDialog = true">Login</v-btn>
-    </div>
+        <NuxtLink to="/appointments">
+          <VBtn text class="nav-btn">
+            My Appointments
+            <VIcon>mdi-calendar-check</VIcon>
+          </VBtn>
+        </NuxtLink>
 
+        <NavMoreMenuDropdown />
+        <NavAccountDropdown />
+      </template>
+    </div>
   </div>
 </template>
-
-
 
 <style scoped>
 

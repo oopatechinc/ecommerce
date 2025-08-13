@@ -2,7 +2,6 @@
 import SnackbarNotification from "~/components/SnackbarNotification.vue";
 
 const authStore = useAuthStore()
-const display = useDisplay()
 
 defineProps({
   fixed: {
@@ -18,7 +17,6 @@ defineProps({
 const emit = defineEmits(['updateScrollClass'])
 
 const isMounted = ref(false)
-// const showNavigation =  ref(false)
 
 onMounted(() => {
   isMounted.value = true
@@ -44,28 +42,28 @@ function changeColor() {
 </script>
 
 <template>
-  <VApp v-if="isMounted" class="app-container-width">
+  <VApp class="app-container-width">
     <NavAppBar>
-      <NavDesktopLinks v-if="display.mdAndUp.value" />
+      <NavDesktopLinks/>
     </NavAppBar>
 
     <VMain>
       <NuxtPage/>
     </VMain>
 
-        <!---Footer------->
-        <NavPageFooter/>
+    <!---Footer------->
+    <NavPageFooter/>
 
-        <!---Snackbar for ---->
-        <SnackbarNotification/>
+    <!---Snackbar for ---->
+    <SnackbarNotification/>
 
-        <VDialog v-if="authStore.showLoginDialog" v-model="authStore.showLoginDialog" width="450" scrollable>
-          <AuthLogin/>
-        </VDialog>
+    <VDialog v-if="authStore.showLoginDialog" v-model="authStore.showLoginDialog" width="500" scrollable>
+      <AuthLogin/>
+    </VDialog>
 
-        <VDialog v-model="authStore.showRegistrationDialog" width="450" scrollable>
-          <AuthRegister/>
-        </VDialog>
+    <VDialog v-model="authStore.showRegistrationDialog" width="500" scrollable>
+      <AuthRegister/>
+    </VDialog>
 
     <!--    <v-dialog v-model="showForgotPasswordDialog" width="450" scrollable>-->
     <!--      <ForgotPassword/>-->
@@ -81,7 +79,7 @@ body, .v-application, .v-main {
 }
 
 .v-main {
-  --v-layout-top:0 !important;
+  --v-layout-top: 0 !important;
 }
 
 .nav-btn {

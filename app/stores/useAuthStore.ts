@@ -3,21 +3,18 @@ import type {AxiosInstance} from "axios";
 
 export const useAuthStore = defineStore('auth', () => {
     const axios = useNuxtApp().$axios as AxiosInstance
+    const indexedDB = useIndexedDB()
+    const runtimeConfig = useRuntimeConfig()
 
     const user = ref<User>()
-    const isLoggedIn = ref(false)
-
     const showLoginDialog = ref(false)
     const showRegistrationDialog = ref(false)
     const isLoggingIn = ref(false)
+    const isRegistering = ref(false)
 
-    function setUser(user: User) {
-        user.value = user
-    }
-
-    function getUser() {
-        return user.value
-    }
+    const isLoggedIn = computed(() => {
+        return user.value !== undefined && Object.keys(user.value).length > 0
+    })
 
     async function fetchUser() {
         let error = false
@@ -26,7 +23,6 @@ export const useAuthStore = defineStore('auth', () => {
         })
 
         if (!error) {
-            isLoggedIn.value = true
             user.value = response!.data.data as User
         }
 
@@ -54,16 +50,26 @@ export const useAuthStore = defineStore('auth', () => {
         })
 
         if (!error) {
-            isLoggedIn.value = true
             user.value = response!.data.data as User
         }
 
         return response!.data.data
     }
 
-    async function registerWithCredentials(data) {
+    async function registerWithCredentials(payload: User) {
         const params = '?type=user&appendConsultant=true&appendMerchantCustomer=true&appendFavoriteBusinesses'
-        return await axios.post(`register/${params}`, data)
+
+        let error = false
+        isRegistering.value = true
+        const response =  await axios.post(`register/${params}`, payload).catch(() => {
+            error = true
+        })
+
+        isRegistering.value = false
+
+        if (error) throw response
+
+        user.value = response?.data.data as User
     }
 
     async function registerWithPhoneVerification(data: any) {
@@ -75,7 +81,21 @@ export const useAuthStore = defineStore('auth', () => {
     }
 
     async function login(data: {email: string, password: string}) {
-        return await axios.post('login', data)
+        let error = false
+        isLoggingIn.value = true
+        const response =  await axios.post('login', data).catch(() => {
+            error = true
+        })
+
+        if (error) throw response
+
+        user.value = response?.data.data.user as User
+
+        await indexedDB.putRecord(
+            runtimeConfig.public.sessionStoreName,
+            runtimeConfig.public.sessionTokenKey,
+            response?.data.data.token
+        )
     }
 
     async function logout() {
@@ -97,5 +117,5 @@ export const useAuthStore = defineStore('auth', () => {
         return response.data.data;
     }
 
-    return {setUser, getUser, registerWithCredentials, registerWithPhoneVerification, verifyRegistrationCode, login, logout, isLoggedIn, fetchUser, isLoggingIn, showLoginDialog, showRegistrationDialog, fetchSocialUser, sendVerificationCode}
+    return {user, registerWithCredentials, registerWithPhoneVerification, verifyRegistrationCode, login, logout, isLoggedIn, fetchUser, isLoggingIn, isRegistering, showLoginDialog, showRegistrationDialog, fetchSocialUser, sendVerificationCode}
 })
